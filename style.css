@@ -1,0 +1,220 @@
+.container {
+  position: absolute;
+}
+/* Pseudo Classes */
+.hoverBtn {
+  padding: 10px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background-color: grey;
+  color: #fff;
+  font-weight: 600;
+  margin: 1rem;
+  transition: background-color 0.5s ease-in-out;
+  cursor: pointer;
+}
+.hoverBtn:hover {
+  background-color: rgb(39, 38, 38);
+}
+/* 2 */
+
+.activeBtn {
+  padding: 10px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background-color: grey;
+  color: #fff;
+  font-weight: 600;
+  margin: 1rem;
+
+  cursor: pointer;
+}
+.activeBtn:active {
+  background-color: rgb(39, 38, 38);
+}
+/* 3 */
+.focusInput {
+  padding: 1rem;
+  margin: 1rem;
+  width: 200px;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+}
+.focusInput:focus {
+  border: 2px solid rgb(243, 61, 61);
+}
+/* 4 */
+.disableBtn {
+  padding: 10px 20px;
+  margin: 1rem;
+  outline: none;
+  border: none;
+  background-color: grey;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.disableBtn:disabled {
+  opacity: 0.5;
+}
+/* 5 */
+
+.invalidInput {
+  padding: 1rem;
+  margin: 1rem;
+  outline: none;
+  border-radius: 3px;
+  width: 200px;
+}
+
+.invalidInput:invalid {
+  border: 2px solid blue;
+}
+/* 6 */
+
+.validInput {
+  padding: 1rem;
+  margin: 1rem;
+  outline: none;
+  border-radius: 3px;
+  width: 200px;
+}
+
+.validInput:invalid {
+  border: 2px solid blue;
+}
+.validInput:valid {
+  border: 2px solid rgb(31, 235, 75);
+}
+/* 7 */
+
+.parentEl1 {
+  padding: 1rem;
+  margin: 1rem;
+}
+.parentEl1 p:first-child {
+  background-color: royalblue;
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+}
+
+/* 8 */
+
+.parentEl2 {
+  padding: 1rem;
+  margin: 1rem;
+}
+.parentEl2 p:last-child {
+  background-color: royalblue;
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+}
+
+/* 9 */
+
+.parentEl3 {
+  padding: 1rem;
+  margin: 1rem;
+}
+.parentEl3 p:nth-child(2) {
+  background-color: royalblue;
+  color: #fff;
+  display: inline-block;
+  padding: 1rem;
+}
+
+/* 10 */
+a.visited:visited {
+  color: rgb(118, 239, 255);
+}
+/* //........................................... */
+/* Pseudo Elements */
+/* 1 */
+
+.lorem {
+  padding: 10px;
+  margin: 1rem;
+}
+.lorem::first-letter {
+  font-size: 3rem;
+  color: blue;
+}
+/* 2 */
+
+a {
+  text-decoration: none;
+  padding: 1rem;
+  margin: 1rem;
+  display: inline-block;
+}
+a.beforeLink::before {
+  content: "";
+  height: 3px;
+  background-color: grey;
+  display: block;
+  margin-top: -4px;
+  width: 100%;
+
+  transition: width 0.5s ease-in-out;
+}
+a.beforeLink:hover::before {
+  width: 0%;
+}
+
+/* 3 */
+
+a.afterLink::after {
+  content: "";
+  height: 3px;
+  background-color: grey;
+  display: block;
+  margin-bottom: -4px;
+  width: 100%;
+
+  transition: width 0.5s ease-in-out;
+}
+a.afterLink:hover::after {
+  width: 0%;
+}
+/* 4 */
+p {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+p.select {
+  line-height: 1.5rem;
+}
+p.select::selection {
+  background-color: tomato;
+  color: #000;
+}
+/* 5 */
+input {
+  padding: 1rem;
+  margin: 1rem;
+  width: 200px;
+  outline: none;
+}
+input.user::placeholder {
+  color: rgb(40, 202, 207);
+  font-size: 14px;
+}
+/* 6 */
+
+.listing {
+  padding: 1rem;
+  margin: 1rem;
+}
+.listing li {
+  padding: 10px;
+}
+.listing li::marker {
+  color: tomato;
+}
